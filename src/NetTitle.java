@@ -12,9 +12,17 @@ public abstract class NetTitle extends Title {
     }
 
 
-    protected double calculatePoints(double pagesOrMinutes) {
+    public double getPseudoCopies(){
         double totalPoints = 0;
-        totalPoints = pagesOrMinutes * convertLiteratureType() *((reach*5)+(availability*0.5) + use);
+        totalPoints = ((reach*5)+(availability*0.5) + getUseFactor());
         return totalPoints;
     }
+
+    public int getUseFactor(){
+        return use;
+    }
+
+
+
+
 }

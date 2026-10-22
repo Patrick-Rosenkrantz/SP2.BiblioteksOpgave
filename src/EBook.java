@@ -22,7 +22,7 @@ public class EBook extends NetTitle {
     @Override
     protected double calculatePoints() {
         double totalPoints = 0;
-        totalPoints = calculatePoints(calculatePages());
+        totalPoints = calculatePages() * convertLiteratureType() * getPseudoCopies();
         return totalPoints;
     }
 }
